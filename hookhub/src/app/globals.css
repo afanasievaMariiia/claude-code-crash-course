@@ -261,3 +261,115 @@ button, input, a, nav, header, footer {
 .animate-on-scroll {
   opacity: 0;
 }
+
+/* Unix Quest Game Animations */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  15% { transform: translateX(-8px) rotate(-1deg); }
+  30% { transform: translateX(8px) rotate(1deg); }
+  45% { transform: translateX(-6px); }
+  60% { transform: translateX(6px); }
+  75% { transform: translateX(-3px); }
+  90% { transform: translateX(3px); }
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.15); }
+  70% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+@keyframes score-pop {
+  0% { transform: scale(1) translateY(0); }
+  30% { transform: scale(1.4) translateY(-4px); }
+  60% { transform: scale(0.9) translateY(0); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+@keyframes fly-up {
+  0% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-60px) scale(1.5); }
+}
+
+@keyframes sparkle-spin {
+  0% { transform: rotate(0deg) scale(0); opacity: 1; }
+  50% { transform: rotate(180deg) scale(1.2); opacity: 1; }
+  100% { transform: rotate(360deg) scale(0); opacity: 0; }
+}
+
+@keyframes slide-in-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(16px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes mascot-happy {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-10deg) scale(1.1); }
+  50% { transform: rotate(0deg) scale(1.15); }
+  75% { transform: rotate(10deg) scale(1.1); }
+}
+
+@keyframes mascot-sad {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+@keyframes caret-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes star-twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.animate-pop {
+  animation: pop 0.35s ease-out;
+}
+
+.animate-score-pop {
+  animation: score-pop 0.4s ease-out;
+}
+
+.animate-fly-up {
+  animation: fly-up 0.8s ease-out forwards;
+}
+
+.animate-sparkle-spin {
+  animation: sparkle-spin 0.7s ease-out forwards;
+}
+
+.animate-slide-in-up {
+  animation: slide-in-up 0.35s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.35s ease-out forwards;
+}
+
+.animate-mascot-happy {
+  animation: mascot-happy 0.6s ease-in-out;
+}
+
+.animate-mascot-sad {
+  animation: mascot-sad 0.5s ease-in-out 3;
+}
+
+.animate-caret-blink {
+  animation: caret-blink 1s step-end infinite;
+}
+
+.animate-star-twinkle {
+  animation: star-twinkle ease-in-out infinite;
+}
